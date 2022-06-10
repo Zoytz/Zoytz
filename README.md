@@ -1,11 +1,15 @@
 ```javascript
+import YandexPracticum from 'https://practicum.yandex.ru/web/';
+
 class WebDeveloper extends YandexPracticum {
 
-  constructor(name, motivation) {
+  constructor(name, age, location, motivation) {
     super(hardSkills);
-    this.name = name;
+    this._name = name;
+    this._age = age;
+    this._location = location;
     this._motivation = motivation;
-    this.myWork = null;
+    this._myWork = null;
   }
 
   getWork(someSite) {
@@ -23,7 +27,7 @@ class WebDeveloper extends YandexPracticum {
        'Webpack'
     ]
     
-    this.myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
+    this._myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
   }
   
   getMotivation() {
@@ -32,7 +36,7 @@ class WebDeveloper extends YandexPracticum {
   
   doWork() {
     this.getMotivation();
-    this.myWork.work();
+    this._myWork.work();
   }
   
   learn(newHardSkills) {
@@ -45,7 +49,7 @@ class WebDeveloper extends YandexPracticum {
   
 };
 
-const zoytz = new WebDeveloper('Алексей', ['Еда', 'Путь к Middle web-developer']);
+const zoytz = new WebDeveloper('Алексей', 33, 'Москва', ['Еда', 'Путь к Middle web-developer']);
 
 zoytz.learn('TypeScript');
 zoytz.getWork(https://hh.ru/);
