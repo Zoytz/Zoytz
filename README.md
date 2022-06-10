@@ -26,8 +26,12 @@ class WebDeveloper extends YandexPracticum {
     this.myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
   }
   
-  doWork() {
+  getMotivation() {
     console.log(this._motivation);
+  }
+  
+  doWork() {
+    this.getMotivation();
     this.myWork.work();
   }
   
@@ -41,7 +45,7 @@ class WebDeveloper extends YandexPracticum {
   
 };
 
-const zoytz = new WebDeveloper('Алексей', ['Еда', 'Путь к Senior web-developer']);
+const zoytz = new WebDeveloper('Алексей', ['Еда', 'Путь к Middle web-developer']);
 
 zoytz.learn('TypeScript');
 zoytz.getWork(https://hh.ru/);
