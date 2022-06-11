@@ -3,7 +3,7 @@ import YandexPracticum from 'https://practicum.yandex.ru/web/';
 
 class WebDeveloper extends YandexPracticum {
 
-  constructor(name, age, location, motivation) {
+  constructor(hardSkills, name, age, location, motivation) {
     super(hardSkills);
     this._name = name;
     this._age = age;
