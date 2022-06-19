@@ -1,5 +1,6 @@
 ```typescript
 import YandexPracticum from 'https://practicum.yandex.ru/web/';
+import HeadHunterRu from 'https://hh.ru';
 
 type Work = {
   companyName: string;
@@ -60,7 +61,7 @@ class WebDeveloper extends YandexPracticum {
 const zoytz = new WebDeveloper('Алексей', 33, 'Москва', ['Еда', 'Путь к Middle web-developer']);
 
 zoytz.learn('TypeScript');
-zoytz.getWork(https://hh.ru/);
+zoytz.getWork(HeadHunterRu);
 ```
 
 <!--
