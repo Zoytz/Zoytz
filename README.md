@@ -55,15 +55,12 @@ class WebDeveloper extends YandexPracticum {
     this.hardSkills.push(newHardSkills);
   }
   
-  private goToSleep() {
-    setTimeout(wakeUp, 28800000);
-  }
-  
 };
 
 const zoytz = new WebDeveloper('Алексей', 33, 'Москва', ['Еда', 'Путь к Middle web-developer']);
 
 zoytz.learn('TypeScript');
+zoytz.getWork(https://hh.ru/);
 ```
 
 <!--
