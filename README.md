@@ -1,18 +1,30 @@
-```javascript
+```typescript
 import YandexPracticum from 'https://practicum.yandex.ru/web/';
+
+type Work = {
+  companyName: string;
+  description: string;
+  hardSkills: string[];
+  work(backlog?: {}): {};
+};
 
 class WebDeveloper extends YandexPracticum {
 
-  constructor(hardSkills, name, age, location, motivation) {
+    private name;
+    private age;
+    private location;
+    public motivation;
+    public myWork: Work | undefined | null;
+
+  constructor(name: string, age: number, location: string, motivation: string[], hardSkills?: string[]) {
     super(hardSkills);
-    this._name = name;
-    this._age = age;
-    this._location = location;
-    this._motivation = motivation;
-    this._myWork = null;
+    this.name = name;
+    this.age = age;
+    this.location = location;
+    this.motivation = motivation;
   }
 
-  getWork(someSite) {
+  public getWork(someSite: Work[]): void {
     console.log(this.hardSkills);
     // [object Array] (9)
     [
@@ -27,23 +39,23 @@ class WebDeveloper extends YandexPracticum {
        'Webpack'
     ]
     
-    this._myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
+    this.myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
   }
   
-  getMotivation() {
-    console.log(this._motivation);
+  public getMotivation() {
+    console.log(this.motivation);
   }
   
-  doWork() {
+  public doWork() {
     this.getMotivation();
-    this._myWork.work();
+    this.myWork.work();
   }
   
-  learn(newHardSkills) {
+  public learn(newHardSkills: string) {
     this.hardSkills.push(newHardSkills);
   }
   
-  goToSleep() {
+  private goToSleep() {
     setTimeout(wakeUp, 28800000);
   }
   
@@ -52,7 +64,6 @@ class WebDeveloper extends YandexPracticum {
 const zoytz = new WebDeveloper('Алексей', 33, 'Москва', ['Еда', 'Путь к Middle web-developer']);
 
 zoytz.learn('TypeScript');
-zoytz.getWork(https://hh.ru/);
 ```
 
 <!--
