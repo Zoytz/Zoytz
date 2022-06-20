@@ -20,7 +20,6 @@ type Work = {
   companyName: string;
   description: string;
   hardSkills: string[];
-  work(backlog?: {}): {};
 };
 
 class WebDeveloper extends YandexPracticum {
