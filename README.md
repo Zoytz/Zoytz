@@ -2,6 +2,20 @@
 import YandexPracticum from 'https://practicum.yandex.ru/web/';
 import HeadHunterRu from 'https://hh.ru';
 
+console.log(YandexPracticum.hardSkills);
+    // [object Array] (9)
+    [
+       'HTML',
+       'CSS',
+       'JavaScript',
+       'React',
+       'Express.js',
+       'БЭМ',
+       'GIT',
+       'MongoDB',
+       'Webpack'
+    ]
+
 type Work = {
   companyName: string;
   description: string;
@@ -26,32 +40,9 @@ class WebDeveloper extends YandexPracticum {
   }
 
   public getWork(someSite: Work[]): void {
-    console.log(this.hardSkills);
-    // [object Array] (9)
-    [
-       'HTML',
-       'CSS',
-       'JavaScript',
-       'React',
-       'Express.js',
-       'БЭМ',
-       'GIT',
-       'MongoDB',
-       'Webpack'
-    ]
-    
     this.myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
   }
-  
-  public getMotivation() {
-    console.log(this.motivation);
-  }
-  
-  public doWork() {
-    this.getMotivation();
-    this.myWork.work();
-  }
-  
+
   public learn(newHardSkills: string) {
     this.hardSkills.push(newHardSkills);
   }
