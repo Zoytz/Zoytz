@@ -38,7 +38,7 @@ class WebDeveloper extends YandexPracticum {
     this.motivation = motivation;
   }
 
-  public getWork(someSite: Work[]): void {
+  public getWork(someSite: Work[]) {
     this.myWork = someSite.find(vacancy => vacancy.hardSkills === this.hardSkills);
   }
 
