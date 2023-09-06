@@ -36,7 +36,7 @@ class WebDeveloper extends YandexPracticum {
   
 };
 
-const zoytz = new WebDeveloper('Алексей', 33, 'Москва', ['Еда', 'Путь к Middle web-developer']);
+const zoytz = new WebDeveloper('Алексей', 34, 'Москва', ['Еда', 'Путь к Middle web-developer']);
 
 zoytz.learn('TypeScript');
 zoytz.learn('Next.js');
