@@ -46,3 +46,4 @@ zoytz.learn('Redux Toolkit');
         
 zoytz.getWork(HeadHunterRu);
 ```
+![Codewars](https://github.r2v.ch/codewars?user=Zoytz)
